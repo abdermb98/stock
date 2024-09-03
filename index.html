@@ -337,8 +337,8 @@
 
         rows.forEach(row => {
             if (row.style.display !== 'none') { // تأكد من حساب الصفوف غير المخفية فقط
-                const column3Value = parseFloat(row.cells[2].textContent) || 0;
-                const column4Value = parseFloat(row.cells[3].textContent) || 0;
+                const column3Value = number(row.cells[2].textContent) || 0;
+                const column4Value = number(row.cells[3].textContent) || 0;
                 sumColumn3 += column3Value;
                 sumColumn4 += column4Value;
             }
